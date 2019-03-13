@@ -7,14 +7,14 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Library.Models
+namespace Library_Management_System.Models
 {
     using System;
     using System.Collections.Generic;
     
     public partial class Librarian
     {
-        public int lid { get; set; }
+        public int l_id { get; set; }
         public string l_name { get; set; }
         public string l_password { get; set; }
     }

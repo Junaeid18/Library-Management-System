@@ -1,0 +1,32 @@
+﻿@{
+    ViewBag.Title = "Signup";
+}
+
+<h2>@ViewBag.Title</h2>
+<div class="container">
+    <div class="row signup">
+        <div class="col-md-6 offset-md-3" id="form">
+            <form method="post" action="">
+                <div class="form-group">
+                    <label for="FirstName" class="sp">First Name:</label>
+                    <input type="text" class="form-control" name="FirstName" id="FirstName1" required>
+                    <label for="LastName" class="sp2">Last Name:  </label>
+                    <input type="text" class="form-control" name="LastName" id="LastName1" required>
+                    <label for="UserName" class="sp2">User Name:  </label>
+                    <input type="text" class="form-control" name="UserName" id="UserName1" required>
+                    <label for="email" class="sp2">Email:  </label>
+                    <input type="text" class="form-control" name="email" id="email1" required>
+                    <label for="num" class="sp2">Mobile/Telephone:  </label>
+                    <input type="text" class="form-control" name="num" id="num1" required>
+                    <label for="pass2" class="sp2">Password:  </label>
+                    <input type="password" class="form-control" name="pass2" id="pass21" required>
+                    <label for="repass" class="sp2">Re-enter Password:  </label>
+                    <input type="password" class="form-control" name="repass" id="repass1" required>
+                </div>
+                <div class="crt">
+                    <input type="submit" class="btn btn-info" value="Create Account" name="done">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

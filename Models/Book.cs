@@ -7,18 +7,16 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Library.Models
+namespace Library_Management_System.Models
 {
     using System;
     using System.Collections.Generic;
     
     public partial class Book
     {
-        public int bid { get; set; }
-        public string book_title { get; set; }
-        public string book_arthor { get; set; }
-        public byte[] book_image { get; set; }
-        public string book_isbn { get; set; }
-        public string available { get; set; }
+        public int isbn { get; set; }
+        public string title { get; set; }
+        public string author { get; set; }
+        public int b_id { get; set; }
     }
 }

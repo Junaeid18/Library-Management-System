@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "Signin";
+}
+
+<h2>@ViewBag.Title</h2>
+<h2>@ViewBag.Msg</h2>
+<div class="container">
+    <div class="login">
+        <form method="post" action="">
+            <div class="form-group">
+                <label for="UserName">User Name</label>
+                <input type="text" class="form-control" name="un" id="username" required>
+            </div>
+            <div class="form-group">
+                <label for="pass">Password</label>
+                <input type="password" class="form-control" name="pas" id="pass" required>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input">Remeber Me
+                </label>
+            </div>
+            <input type="submit" class="btn btn-info" value="Submit" name="done2">
+        </form>
+    </div>
+</div>

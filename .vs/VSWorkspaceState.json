@@ -1,8 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Models"
+    "\\Controllers",
+    "\\Views",
+    "\\Views\\Home",
+    "\\Views\\Shared"
   ],
-  "SelectedNode": "\\Models\\Librarian.cs",
+  "SelectedNode": "\\Controllers\\HomeController.cs",
   "PreviewInSolutionExplorer": false
 }

@@ -7,17 +7,17 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Library.Models
+namespace Library_Management_System.Models
 {
     using System;
     using System.Collections.Generic;
     
     public partial class Student
     {
-        public int sid { get; set; }
+        public int s_id { get; set; }
         public string s_name { get; set; }
-        public string s_username { get; set; }
-        public string s_password { get; set; }
+        public string s_uname { get; set; }
         public string s_email { get; set; }
+        public string password { get; set; }
     }
 }
