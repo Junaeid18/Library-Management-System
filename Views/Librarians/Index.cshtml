@@ -1,0 +1,39 @@
+﻿@model IEnumerable<Library_Management_System.Models.Librarian>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.l_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.l_password)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.l_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.l_password)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.l_id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.l_id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.l_id })
+        </td>
+    </tr>
+}
+
+</table>

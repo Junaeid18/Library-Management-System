@@ -24,6 +24,11 @@ namespace Library_Management_System.Controllers
         {
             return View();
         }
+        public ActionResult search()
+        {
+            ViewBag.msg = "Result will be found";
+            return View();
+        }
 
         public ActionResult profile()
         {
