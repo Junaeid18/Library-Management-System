@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Optimization;
 
-namespace Library_Management_System
+namespace LMS
 {
     public class BundleConfig
     {

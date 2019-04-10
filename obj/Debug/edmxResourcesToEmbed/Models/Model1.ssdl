@@ -31,6 +31,18 @@
     <Property Name="User_name" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="password" Type="varchar" MaxLength="50" Nullable="false" />
   </EntityType>
+  <EntityType Name="Lregistration">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="firstname" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="lastname" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="username" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="password" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="email" Type="varchar" MaxLength="50" />
+    <Property Name="contact" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
   <EntityType Name="Student">
     <Key>
       <PropertyRef Name="id" />
@@ -43,10 +55,20 @@
     <Property Name="contact" Type="varchar" MaxLength="50" />
     <Property Name="address" Type="varchar" MaxLength="50" />
   </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="Username" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="password" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
   <EntityContainer Name="LMSModelStoreContainer">
     <EntitySet Name="Book" EntityType="Self.Book" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="BookIssue2" EntityType="Self.BookIssue2" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Librarian" EntityType="Self.Librarian" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Lregistration" EntityType="Self.Lregistration" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Student" EntityType="Self.Student" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
   </EntityContainer>
 </Schema>

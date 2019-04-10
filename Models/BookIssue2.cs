@@ -7,18 +7,19 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Library.Models
+namespace LMS.Models
 {
     using System;
     using System.Collections.Generic;
     
     public partial class BookIssue2
     {
-        public int sid { get; set; }
+        public int lid { get; set; }
+        public string Senrollment { get; set; }
         public string Book_isbn { get; set; }
         public string issue_date { get; set; }
         public string Return_date { get; set; }
-        public string s_username { get; set; }
-        public string submission_date { get; set; }
+        public string Susername { get; set; }
+        public string is_book_return { get; set; }
     }
 }

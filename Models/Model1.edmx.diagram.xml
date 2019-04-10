@@ -4,11 +4,13 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="a38540db7dd8422dbe525a8945ef55c5" Name="Diagram1">
+      <Diagram DiagramId="f8e6ca5a0f5a4165943bad26752c3644" Name="Diagram1">
         <EntityTypeShape EntityType="LMSModel.Book" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="LMSModel.Librarian" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="LMSModel.Student" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="LMSModel.BookIssue2" Width="1.5" PointX="3.375" PointY="3.75" />
+        <EntityTypeShape EntityType="LMSModel.BookIssue2" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMSModel.Librarian" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMSModel.Lregistration" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMSModel.Student" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LMSModel.User" Width="1.5" PointX="4.75" PointY="3.75" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

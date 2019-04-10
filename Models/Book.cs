@@ -7,16 +7,24 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Library_Management_System.Models
+namespace LMS.Models
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel;
     
     public partial class Book
     {
-        public int isbn { get; set; }
-        public string title { get; set; }
-        public string author { get; set; }
-        public int b_id { get; set; }
+        public int Bid { get; set; }
+        [Required(ErrorMessage ="Give a title")]
+        public string Book_title { get; set; }
+        [Required(ErrorMessage = "Give arthor name")]
+        public string Book_arthor { get; set; }
+        [DisplayName("Upload Picture")]
+        public byte[] Book_image { get; set; }
+        [Required(ErrorMessage = "Give isbn")]
+        public string Book_isbn { get; set; }
+        public string available { get; set; }
     }
 }

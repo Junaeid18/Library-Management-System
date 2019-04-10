@@ -6,31 +6,40 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-    <link href="@Url.Content("~/Style/StyleSheet.css")" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
+        <div class="container-fluid">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                    <img src="~/Images/logo3.png" alt="logo"/>
+                @Html.ActionLink("Librarian", "LoginIN", "Users", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Main")</li>
-                    <li>@Html.ActionLink("Profile", "profile", "Main")</li>
-                    <li>@Html.ActionLink("Book", "Book", "Main")</li>
-                    <li>@Html.ActionLink("Signin", "Signin", "Main")</li>
-                    <li>@Html.ActionLink("Signup", "Signup", "Main")</li>
+                    <li>@Html.ActionLink("Registra Students", "RegistrationList", "Users")</li>
+                    <li>@Html.ActionLink("Books List", "List", "Books")</li>
+
                 </ul>
-                <form class="form-inline" action="@Html.ActionLink("Search", "search", "Main")">
-                    <input class="form-control mr-sm-2" type="text" placeholder="Search">
-                    <button class="btn btn-success" type="submit">Search</button>
-                </form>
+
+                <ul class="nav navbar-nav navbar-right">
+                    @if (Session["ID"] != null)
+                    {
+                        <li style="top:10px;left:20px;color:white">Hellow @Session["Username"].ToString()</li>
+                        <li style="bottom:5px; left:20px;">
+                            <a href="@Url.Action("Logout","Users")">LOGOUT!!</a>
+                        </li>
+                    }
+                    else
+                    {
+                        <li>@Html.ActionLink("SIGNIN", "Login", "Users")</li>
+                        <li>@Html.ActionLink("SIGNUP", "Create", "Users")</li>
+                    }
+
+                </ul>
             </div>
         </div>
     </div>

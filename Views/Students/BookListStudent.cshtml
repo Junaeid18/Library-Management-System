@@ -1,0 +1,47 @@
+﻿@model IEnumerable<LMS.Models.Book>
+
+@{
+    Layout = "~/Views/Shared/_LayoutStudent.cshtml";
+    ViewBag.Title = "BOOKS";
+}
+
+<h2>BookListStudent</h2>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-2">
+            <div class="nav nav-pills nav-stacked">
+                <li class="active"><a href="#"><h4> categories</h4> </a> </li>
+                <li><a href="#"> categories</a> </li>
+               
+            </div>
+          
+        </div>
+        <div class="col-md-10">
+            <div class="panel panel-info">
+                <div class="panel-heading"> product</div>
+                <div class="panel-body">
+                    @foreach (var item in Model)
+                    {
+                        <div class="col-md-4">
+
+                            <div class="panel panel-info">
+                                <div class="panel-heading">  @Html.DisplayFor(modelItem => item.Book_title)</div>
+                                <div class="panel-body">
+                                    <img src="" />
+                                </div>
+                                <div class="panel-heading">
+                                    11
+                                    <button style="float:right;" class="btn btn-danger btn-xs"> AddBook</button>
+                                </div>
+                            </div>
+                        </div>
+                    }
+
+                 </div>
+                    
+             </div>
+        </div>
+       
+    </div>
+</div>

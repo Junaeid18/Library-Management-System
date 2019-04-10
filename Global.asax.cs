@@ -6,7 +6,7 @@ using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
 
-namespace Library_Management_System
+namespace LMS
 {
     public class MvcApplication : System.Web.HttpApplication
     {

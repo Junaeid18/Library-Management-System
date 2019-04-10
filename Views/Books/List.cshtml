@@ -1,0 +1,58 @@
+﻿@model IEnumerable<LMS.Models.Book>
+
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>List</h2>
+
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Book_title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Book_arthor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Book_image)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Book_isbn)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.available)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Book_title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Book_arthor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Book_image)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Book_isbn)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.available)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Bid }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Bid }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Bid })
+        </td>
+    </tr>
+}
+
+</table>

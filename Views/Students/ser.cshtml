@@ -1,0 +1,68 @@
+﻿@model IEnumerable<LMS.Models.Book>
+
+@{
+    ViewBag.Title = "ser";
+}
+
+<h2>ser</h2>
+@using (Html.BeginForm("ser", "Students", FormMethod.Get))
+{
+    <ul class="nav navbar-nav">
+
+     
+
+        <li style="width:300px;left:10px;top:10px"><input class="form-control" type="text" id="Search"></li>
+        <li style="top:10px;left:20px">
+            <button class="btn btn-outline-success " type="submit">Search</button>
+        </li>
+    </ul>}
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Book_title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Book_arthor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Book_image)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Book_isbn)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.available)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Book_title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Book_arthor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Book_image)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Book_isbn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.available)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Bid }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Bid }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Bid })
+            </td>
+        </tr>
+    }
+
+</table>
